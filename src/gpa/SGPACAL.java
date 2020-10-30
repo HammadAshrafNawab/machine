@@ -380,10 +380,8 @@ public class SGPACAL extends javax.swing.JFrame {
                          }
                          else 
                          {System.out.println("INSERTED");}
-            
-                         
-
-        }
+            }
+        
 
 
     }//GEN-LAST:event_jButton7ActionPerformed
