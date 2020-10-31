@@ -124,10 +124,11 @@ public class DAO {
         int res = 0;
         try {
             Connection();
-            String qry = "insert into cgpa  values (?,?)";
+            String qry = "insert into cgpa  values (?,?,?)";
             PreparedStatement pst = con.prepareStatement(qry);
             pst.setInt(2, s.rollno);
             pst.setDouble(1,s.sgpa);
+            pst.setInt(3,s.semester);
             
 
             res = pst.executeUpdate();

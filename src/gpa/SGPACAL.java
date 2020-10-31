@@ -21,8 +21,7 @@ public class SGPACAL extends javax.swing.JFrame {
      */
     public SGPACAL() {
         initComponents();
-      
-    
+
     }
 
     /**
@@ -35,7 +34,7 @@ public class SGPACAL extends javax.swing.JFrame {
     private void initComponents() {
 
         sc = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
+        l1 = new javax.swing.JLabel();
         s1 = new javax.swing.JTextField();
         c1 = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
@@ -44,16 +43,16 @@ public class SGPACAL extends javax.swing.JFrame {
         m1 = new javax.swing.JTextField();
         g1 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
-        h1 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        b1 = new javax.swing.JButton();
+        l2 = new javax.swing.JLabel();
         s2 = new javax.swing.JTextField();
         c3 = new javax.swing.JComboBox<>();
         m2 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        b2 = new javax.swing.JButton();
+        l3 = new javax.swing.JLabel();
+        l4 = new javax.swing.JLabel();
+        l5 = new javax.swing.JLabel();
+        l6 = new javax.swing.JLabel();
         s3 = new javax.swing.JTextField();
         s4 = new javax.swing.JTextField();
         s5 = new javax.swing.JTextField();
@@ -66,10 +65,10 @@ public class SGPACAL extends javax.swing.JFrame {
         m3 = new javax.swing.JTextField();
         m5 = new javax.swing.JTextField();
         m6 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        b5 = new javax.swing.JButton();
+        b3 = new javax.swing.JButton();
+        b4 = new javax.swing.JButton();
+        b6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         g2 = new javax.swing.JComboBox<>();
@@ -84,7 +83,7 @@ public class SGPACAL extends javax.swing.JFrame {
 
         sc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", " " }));
 
-        jLabel1.setText("SUBJECT_1");
+        l1.setText("SUBJECT_1");
 
         s1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,21 +108,31 @@ public class SGPACAL extends javax.swing.JFrame {
 
         jLabel5.setText("GRADE");
 
-        h1.setText("HIDE");
+        b1.setText("HIDE");
+        b1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b1ActionPerformed(evt);
+            }
+        });
 
-        jLabel6.setText("SUBJECT_2");
+        l2.setText("SUBJECT_2");
 
         c3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4", "3", "2", "1", " " }));
 
-        jButton2.setText("HIDE");
+        b2.setText("HIDE");
+        b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b2ActionPerformed(evt);
+            }
+        });
 
-        jLabel7.setText("SUBJECT_3");
+        l3.setText("SUBJECT_3");
 
-        jLabel8.setText("SUBJECT_4");
+        l4.setText("SUBJECT_4");
 
-        jLabel9.setText("SUBJECT_5");
+        l5.setText("SUBJECT_5");
 
-        jLabel10.setText("SUBJECT_6");
+        l6.setText("SUBJECT_6");
 
         c2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4", "3", "2", "1", " " }));
 
@@ -133,13 +142,33 @@ public class SGPACAL extends javax.swing.JFrame {
 
         c6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4", "3", "2", "1", " " }));
 
-        jButton3.setText("HIDE");
+        b5.setText("HIDE");
+        b5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b5ActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("HIDE");
+        b3.setText("HIDE");
+        b3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b3ActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("HIDE");
+        b4.setText("HIDE");
+        b4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b4ActionPerformed(evt);
+            }
+        });
 
-        jButton6.setText("HIDE");
+        b6.setText("HIDE");
+        b6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setText("CALCULATE SPGA");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -177,12 +206,12 @@ public class SGPACAL extends javax.swing.JFrame {
                 .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1)
-                        .addComponent(jLabel6)
-                        .addComponent(jLabel7)
-                        .addComponent(jLabel8)
-                        .addComponent(jLabel9)
-                        .addComponent(jLabel10))
+                        .addComponent(l1)
+                        .addComponent(l2)
+                        .addComponent(l3)
+                        .addComponent(l4)
+                        .addComponent(l5)
+                        .addComponent(l6))
                     .addComponent(rollno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,37 +256,37 @@ public class SGPACAL extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(g5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(12, 12, 12)
-                                .addComponent(jButton3))
+                                .addComponent(b5))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel4)
                                         .addGap(49, 49, 49)
                                         .addComponent(jLabel5))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(m1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                                         .addComponent(g1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(h1))
+                                .addComponent(b1))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(m2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(12, 12, 12)
                                 .addComponent(g2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(b2))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(m3, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(g3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(12, 12, 12)
-                                .addComponent(jButton4))
+                                .addComponent(b3))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(m4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(g4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(12, 12, 12)
-                                .addComponent(jButton5))))
+                                .addComponent(b4))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -269,7 +298,7 @@ public class SGPACAL extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(gpa, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(67, 67, 67)))
-                        .addComponent(jButton6)))
+                        .addComponent(b6)))
                 .addContainerGap(138, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -288,52 +317,52 @@ public class SGPACAL extends javax.swing.JFrame {
                     .addComponent(rollno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
+                    .addComponent(l1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(s1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(c1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(m1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(g1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(h1)))
+                        .addComponent(b1)))
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(s2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
+                    .addComponent(l2)
                     .addComponent(m2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2)
+                    .addComponent(b2)
                     .addComponent(c2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(g2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
+                    .addComponent(l3)
                     .addComponent(s3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(c3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(m3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4)
+                    .addComponent(b3)
                     .addComponent(g3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
+                    .addComponent(l4)
                     .addComponent(s4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(c4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(m4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5)
+                    .addComponent(b4)
                     .addComponent(g4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
+                    .addComponent(l5)
                     .addComponent(s5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(c5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(m5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3)
+                    .addComponent(b5)
                     .addComponent(g5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
+                    .addComponent(l6)
                     .addComponent(s6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(c6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(m6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6)
+                    .addComponent(b6)
                     .addComponent(g6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addComponent(jButton7)
@@ -348,18 +377,17 @@ public class SGPACAL extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         DAO dao = new DAO();
         sgpa s = new sgpa();
-       int e;
+        int e;
         double f;
-        
-        double p=0;
+
+        double p = 0;
         for (int i = 0; i < 6; i++) {
 
             if (i == 0) {
                 s.cr = Integer.parseInt((String) c1.getSelectedItem());
-           
+
                 s.gradepoints = Double.parseDouble((String) g1.getSelectedItem());
-               
-                
+
                 s.marks = Integer.parseInt(m1.getText());
                 s.subject = s1.getText();
                 s.rollno = Integer.parseInt(rollno.getText());
@@ -396,6 +424,7 @@ public class SGPACAL extends javax.swing.JFrame {
                 s.rollno = Integer.parseInt(rollno.getText());
                 int a = dao.insertgpa(s);
             } else if (i == 5) {
+                
                 s.cr = Integer.parseInt((String) c6.getSelectedItem());
                 s.gradepoints = Double.parseDouble((String) g6.getSelectedItem());
                 s.marks = Integer.parseInt(m6.getText());
@@ -403,66 +432,57 @@ public class SGPACAL extends javax.swing.JFrame {
                 s.rollno = Integer.parseInt(rollno.getText());
                 int a = dao.insertgpa(s);
                 System.out.println("INSERTED");
+
             } else {
                 System.out.println("INSERTED");
-            }
-        }
-        for (int j=0;j<2;j++)
-        {
-        if(j==0)
-        {
-            s.rollno = Integer.parseInt(rollno.getText());
-        ResultSet rs = dao.sgpaa(s);
-
-        System.out.println(rs);
-        try {
-            while (rs.next()) {
-
-                m1.setText(rs.getString(1) + "");
                 
-             
-
-                         }
-        } catch (Exception ex) {
-            System.out.println(ex.toString());
-        }
-        }   
-        else if (j==1)
-        {
-           s.rollno = Integer.parseInt(rollno.getText());
-        ResultSet rs = dao.grade(s);
-             
-        System.out.println(rs);
-        try {
-            while (rs.next()) {
-
-                m2.setText(rs.getDouble(1) + "");
-                e = Integer.parseInt(m1.getText());
-                f =Double.parseDouble(m2.getText());
-                  System.out.println(f);
-         double l;
-         l=f/e;
-         
-        
-         
-              gpa.setText(""+l);
-         s.sgpa=Double.parseDouble(gpa.getText());
-         s.rollno=Integer.parseInt(rollno.getText());
-         int k=dao.insertcgpa(s);
-           
             }
-        } catch (Exception ex) {
-            System.out.println(ex.toString());
-        } 
-     
         }
-   
+
+        for (int j = 0; j < 2; j++) {
+            if (j == 0) {
+                s.rollno = Integer.parseInt(rollno.getText());
+                ResultSet rs = dao.sgpaa(s);
+
+                System.out.println(rs);
+                try {
+                    while (rs.next()) {
+
+                        m1.setText(rs.getString(1) + "");
+
+                    }
+                } catch (Exception ex) {
+                    System.out.println(ex.toString());
+                }
+            } else if (j == 1) {
+                s.rollno = Integer.parseInt(rollno.getText());
+                ResultSet rs = dao.grade(s);
+
+                System.out.println(rs);
+                try {
+                    while (rs.next()) {
+
+                        m2.setText(rs.getDouble(1) + "");
+                        e = Integer.parseInt(m1.getText());
+                        f = Double.parseDouble(m2.getText());
+                        System.out.println(f);
+                        double l;
+                        l = f / e;
+
+                        gpa.setText("" + l);
+                        s.sgpa = Double.parseDouble(gpa.getText());
+                        s.rollno = Integer.parseInt(rollno.getText());
+                        s.semester = Integer.parseInt((String) sc.getSelectedItem());
+                        int k = dao.insertcgpa(s);
+
+                    }
+                } catch (Exception ex) {
+                    System.out.println(ex.toString());
+                }
+
+            }
+
         }
-     
-     
- 
-        
-   
 
 
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -478,6 +498,66 @@ public class SGPACAL extends javax.swing.JFrame {
     private void gpaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gpaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_gpaActionPerformed
+
+    private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
+        c6.setVisible(false);
+        m6.setVisible(false);
+        g6.setVisible(false);
+        l6.setVisible(false);
+        b6.setVisible(false);
+        s6.setVisible(false);
+
+
+    }//GEN-LAST:event_b6ActionPerformed
+
+    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
+        c5.setVisible(false);
+        m5.setVisible(false);
+        g5.setVisible(false);
+        l5.setVisible(false);
+        b5.setVisible(false);
+        s5.setVisible(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_b5ActionPerformed
+
+    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
+        c4.setVisible(false);
+        m4.setVisible(false);
+        g4.setVisible(false);
+        l4.setVisible(false);
+        b4.setVisible(false);
+        s4.setVisible(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_b4ActionPerformed
+
+    private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
+        c3.setVisible(false);
+        m3.setVisible(false);
+        g3.setVisible(false);
+        l3.setVisible(false);
+        b3.setVisible(false);
+        s3.setVisible(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_b3ActionPerformed
+
+    private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
+        c2.setVisible(false);
+        m2.setVisible(false);
+        g2.setVisible(false);
+        l2.setVisible(false);
+        b2.setVisible(false);
+        s2.setVisible(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_b2ActionPerformed
+
+    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
+        c1.setVisible(false);
+        m1.setVisible(false);
+        g1.setVisible(false);
+        l1.setVisible(false);
+        b1.setVisible(false);
+        s1.setVisible(false);
+    }//GEN-LAST:event_b1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -516,6 +596,12 @@ public class SGPACAL extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton b1;
+    private javax.swing.JButton b2;
+    private javax.swing.JButton b3;
+    private javax.swing.JButton b4;
+    private javax.swing.JButton b5;
+    private javax.swing.JButton b6;
     private javax.swing.JComboBox<String> c1;
     private javax.swing.JComboBox<String> c2;
     private javax.swing.JComboBox<String> c3;
@@ -529,24 +615,18 @@ public class SGPACAL extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> g5;
     private javax.swing.JComboBox<String> g6;
     private javax.swing.JTextField gpa;
-    private javax.swing.JButton h1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel l1;
+    private javax.swing.JLabel l2;
+    private javax.swing.JLabel l3;
+    private javax.swing.JLabel l4;
+    private javax.swing.JLabel l5;
+    private javax.swing.JLabel l6;
     private javax.swing.JTextField m1;
     private javax.swing.JTextField m2;
     private javax.swing.JTextField m3;
