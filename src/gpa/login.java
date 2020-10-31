@@ -99,7 +99,7 @@ public class login extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         DAO dao = new DAO();
         REG s=new REG();
-        signup obj=new signup();
+        SGPACAL obj=new SGPACAL();
        s.password=password.getText();
         s.username=username.getText();
            ResultSet rs=dao.log(s);

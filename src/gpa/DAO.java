@@ -35,9 +35,8 @@ public class DAO {
             pst.setString(2, s.name);
 
             pst.setString(3, s.degree);
-             pst.setString(4, s.username);
+            pst.setString(4, s.username);
             pst.setString(5, s.password);
-           
 
             res = pst.executeUpdate();
 
@@ -46,85 +45,98 @@ public class DAO {
         }
         return res;
     }
-    
-    ResultSet log(REG s)
-    {
-         ResultSet rs = null;
-        try
-        {
-        Connection();
-       String query ="Select * FROM log where username=? AND password=?";
-       PreparedStatement pst = con.prepareStatement(query);
-       pst.setString(1,s.username);
-       pst.setString(2, s.password);
-       rs= pst.executeQuery();
-       
-        }
-        
-        
-        catch (Exception ex) {
+
+    ResultSet log(REG s) {
+        ResultSet rs = null;
+        try {
+            Connection();
+            String query = "Select * FROM log where username=? AND password=?";
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setString(1, s.username);
+            pst.setString(2, s.password);
+            rs = pst.executeQuery();
+
+        } catch (Exception ex) {
             System.out.println(ex.toString());
         }
-        
-        
-        
-      ;
+        ;
         return rs;
     }
-   int insertgpa(sgpa s)
-   {
-     int res = 0; 
-     try{
-        Connection();
-            String qry = "insert into sgpa values (?,?,?,?,?,?)";
+
+    int insertgpa(sgpa s) {
+        int res = 0;
+        try {
+            Connection();
+            String qry = "insert into sgpa values (?,?,?,?,?,?,?)";
             PreparedStatement pst = con.prepareStatement(qry);
-       pst.setInt(1, s.marks);
-        pst.setInt(2, s.cr);
-        pst.setString(3, s.subject);
-        pst.setInt(4, s.rollno);
-        pst.setInt(6,s.semester);
-        pst.setDouble(5,s.gradepoints);
-        
-     
-        res=pst.executeUpdate();
-        
-     }
-          catch (Exception ex) {
-            System.out.println(ex.toString());
-        }
-     
-     
-        return res;
-       
-   }
-       
-    ResultSet sgpa(REG s)
-    {
-         ResultSet rs = null;
-        try
-        {
-        Connection();
+            pst.setInt(1, s.marks);
+            pst.setInt(2, s.cr);
+            pst.setString(3, s.subject);
+            pst.setInt(4, s.rollno);
+            pst.setInt(6, s.semester);
+            pst.setDouble(5, s.gradepoints);
+           pst.setDouble(7, s.sgpa);
 
-       String query ="Select rollno=?,sum(marks),sum(gradepoints) sgpa group by rollno ";
-       PreparedStatement pst = con.prepareStatement(query);
-       pst.setInt(1, s.rollno);
-       rs= pst.executeQuery();
-       
-        }
-        
-        
-        catch (Exception ex) {
+            res = pst.executeUpdate();
+
+        } catch (Exception ex) {
             System.out.println(ex.toString());
         }
-        
-        
-        
-      ;
-        return rs;
+
+        return res;
+
     }
 
- 
-   
+    ResultSet sgpaa(sgpa s) {
+        ResultSet rs = null;
+        try {
+            Connection();
+
+            String query = "SELECT SUM(cr) FROM sgpa where rollno=?";
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setInt(1, s.rollno);
+            rs = pst.executeQuery();
+
+        } catch (Exception ex) {
+            System.out.println(ex.toString());
+        }
+        ;
+        return rs;
+    }
+    
+    ResultSet grade(sgpa s) {
+        ResultSet rs = null;
+        try {
+            Connection();
+
+            String query = "select sum(cr*gradepoints) from sgpa where rollno=?";
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setInt(1, s.rollno);
+            rs = pst.executeQuery();
+
+        } catch (Exception ex) {
+            System.out.println(ex.toString());
+        }
+        ;
+        return rs;
+    }
+     int insertcgpa(sgpa s) {
+        int res = 0;
+        try {
+            Connection();
+            String qry = "insert into cgpa  values (?,?)";
+            PreparedStatement pst = con.prepareStatement(qry);
+            pst.setInt(2, s.rollno);
+            pst.setDouble(1,s.sgpa);
+            
+
+            res = pst.executeUpdate();
+
+        } catch (Exception ex) {
+            System.out.println(ex.toString());
+        }
+        return res;
+    }
     
     
 
