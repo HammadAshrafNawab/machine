@@ -69,13 +69,13 @@ public class DAO {
             Connection();
             String qry = "insert into sgpa values (?,?,?,?,?,?,?)";
             PreparedStatement pst = con.prepareStatement(qry);
-            pst.setInt(1, s.marks);
-            pst.setInt(2, s.cr);
-            pst.setString(3, s.subject);
-            pst.setInt(4, s.rollno);
-            pst.setInt(6, s.semester);
-            pst.setDouble(5, s.gradepoints);
-           pst.setDouble(7, s.sgpa);
+            pst.setInt(4, s.marks);
+            pst.setInt(3, s.cr);
+            pst.setString(5, s.subject);
+            pst.setInt(1, s.rollno);
+            pst.setInt(7, s.semester);
+            pst.setDouble(6, s.gradepoints);
+            pst.setDouble(2, s.sgpa);
 
             res = pst.executeUpdate();
 
@@ -103,7 +103,7 @@ public class DAO {
         ;
         return rs;
     }
-    
+
     ResultSet grade(sgpa s) {
         ResultSet rs = null;
         try {
@@ -120,16 +120,16 @@ public class DAO {
         ;
         return rs;
     }
-     int insertcgpa(sgpa s) {
+
+    int insertcgpa(sgpa s) {
         int res = 0;
         try {
             Connection();
             String qry = "insert into cgpa  values (?,?,?)";
             PreparedStatement pst = con.prepareStatement(qry);
             pst.setInt(2, s.rollno);
-            pst.setDouble(1,s.sgpa);
-            pst.setInt(3,s.semester);
-            
+            pst.setDouble(1, s.sgpa);
+            pst.setInt(3, s.semester);
 
             res = pst.executeUpdate();
 
@@ -138,7 +138,5 @@ public class DAO {
         }
         return res;
     }
-    
-    
 
 }
