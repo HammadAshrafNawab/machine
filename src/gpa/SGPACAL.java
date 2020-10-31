@@ -79,6 +79,7 @@ public class SGPACAL extends javax.swing.JFrame {
         g6 = new javax.swing.JComboBox<>();
         rollno = new javax.swing.JTextField();
         gpa = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -204,6 +205,13 @@ public class SGPACAL extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("CALCULATE_CGPA");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -267,9 +275,9 @@ public class SGPACAL extends javax.swing.JFrame {
                                         .addComponent(jLabel5))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(m1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(g1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(24, 24, 24)
                                 .addComponent(b1))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(m2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -301,7 +309,11 @@ public class SGPACAL extends javax.swing.JFrame {
                                 .addComponent(gpa, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(67, 67, 67)))
                         .addComponent(b6)))
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(125, 125, 125))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -370,7 +382,9 @@ public class SGPACAL extends javax.swing.JFrame {
                 .addComponent(jButton7)
                 .addGap(45, 45, 45)
                 .addComponent(gpa, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
         );
 
         pack();
@@ -574,6 +588,12 @@ public class SGPACAL extends javax.swing.JFrame {
       // TODO add your handling code here:
     }//GEN-LAST:event_rollnoActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+     CGPA obj=new CGPA();
+     obj.setVisible(true);
+     dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -630,6 +650,7 @@ public class SGPACAL extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> g5;
     private javax.swing.JComboBox<String> g6;
     private javax.swing.JTextField gpa;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;

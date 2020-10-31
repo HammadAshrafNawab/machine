@@ -128,7 +128,7 @@ public class DAO {
             String qry = "insert into cgpa  values (?,?,?)";
             PreparedStatement pst = con.prepareStatement(qry);
             pst.setInt(2, s.rollno);
-            pst.setDouble(1, s.sgpa);
+            pst.setDouble(1, s.cgpa);
             pst.setInt(3, s.semester);
 
             res = pst.executeUpdate();
@@ -139,4 +139,22 @@ public class DAO {
         return res;
     }
 
+    ResultSet cgpa(sgpa s) {
+        ResultSet rs = null;
+        try {
+            Connection();
+
+            String query = "Select AVG(gpa) from cgpa where rollno=?";
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setInt(1, s.rollno);
+            rs = pst.executeQuery();
+
+        } catch (Exception ex) {
+            System.out.println(ex.toString());
+        }
+        ;
+        return rs;
+    }
+    
+    
 }

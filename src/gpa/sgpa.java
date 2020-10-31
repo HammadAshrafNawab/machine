@@ -17,4 +17,5 @@ public class sgpa {
     int semester;
     int rollno;
     double sgpa;
+    double cgpa;
 }
